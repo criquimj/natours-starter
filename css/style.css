@@ -164,7 +164,10 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 25rem 10rem;
+  padding-top: 25rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 10rem;
   margin-top: -20vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -182,50 +185,59 @@ body {
 
 .about__paragraph {
   font-size: 1.6rem;
-  line-height: 1.6; }
-  .about__paragraph:last-of-type {
-    margin-bottom: 2.5rem; }
+  line-height: 1.6;
+  margin-bottom: 2.5rem; }
 
 .about__btn {
   font-size: 1.5rem;
   border: none;
   border-radius: 0;
   background-color: transparent;
-  padding: 0.5rem;
-  color: #7ed56f;
+  padding-bottom: 0.5rem;
+  color: #28b485;
   border-bottom: 1px solid currentColor;
   transition: all 0.2s; }
   .about__btn span {
     margin-left: 3px;
     transition: margin-left 0.2s; }
   .about__btn:hover {
-    color: #28b485;
-    transform: translateY(-2px); }
+    color: #7ed56f;
+    transform: translateY(-2px);
+    text-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); }
     .about__btn:hover span {
       margin-left: 6px; }
+  .about__btn:active {
+    transform: translateY(1px);
+    text-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15); }
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(5, 1fr); }
-  .gallery__item {
-    overflow: hidden; }
-    .gallery__item--1 {
-      grid-column: 1 / span 4;
-      grid-row: 1 / span 3; }
-    .gallery__item--2 {
-      grid-column: 4 / span 4;
-      grid-row: 2 / span 3; }
-    .gallery__item--3 {
-      grid-column: 2 / span 4;
-      grid-row: 3 / span 3; }
   .gallery__img {
     width: 100%;
     height: auto;
     object-fit: cover;
     display: block;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.5);
+    transition: all 0.3s; }
+    .gallery__img:hover {
+      transform: scale(1.05) translateY(-0.3rem);
+      z-index: 20;
+      outline: 1rem solid #28b485;
+      outline-offset: 1.5rem; }
+    .gallery__img-1 {
+      grid-column: 1 / span 4;
+      grid-row: 1 / span 3; }
+    .gallery__img-2 {
+      grid-column: 4 / span 4;
+      grid-row: 2 / span 3; }
+    .gallery__img-3 {
+      grid-column: 2 / span 4;
+      grid-row: 3 / span 3; }
+  .gallery:hover .gallery__img:not(:hover) {
+    transform: scale(0.95); }
 
 .heading-tertiary-about {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   margin-top: 2rem; }
