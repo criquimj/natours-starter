@@ -120,6 +120,12 @@ body {
   .btn--white::after {
     background-color: #fff; }
 
+.btn--green {
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+  color: #fff !important; }
+  .btn--green::after {
+    background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+
 .btn::after {
   content: "";
   display: inline-block;
@@ -284,11 +290,12 @@ body {
 
 .tours {
   display: grid;
-  grid-template-columns: repeat(3, minmax(25rem, 35rem));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 35rem));
   justify-content: center;
   grid-template-rows: max-content 1fr;
   grid-column-gap: 7rem;
-  padding: 0 5rem; }
+  padding: 0 5rem;
+  row-gap: 5rem; }
   .tours__heading {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
@@ -299,10 +306,11 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     perspective: 150rem;
-    -moz-perspective: 150rem; }
+    -moz-perspective: 150rem;
+    height: 52rem; }
     .tours__card__side {
       font-size: 2rem;
-      height: 50rem;
+      height: 52rem;
       transition: all 0.8s ease;
       width: 100%;
       backface-visibility: hidden;
@@ -367,3 +375,33 @@ body {
         background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
       .tours__card__heading-span--3 {
         background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+    .tours__card__details {
+      padding: 3rem; }
+    .tours__card__list {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .tours__card__list li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .tours__card__list li:not(:last-of-type) {
+          border-bottom: 1px solid #eee; }
+    .tours__card__cta {
+      color: #fff; }
+    .tours__card__price-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 52rem; }
+    .tours__card__price-only {
+      font-size: 1.4rem;
+      text-transform: uppercase; }
+    .tours__card__price-value {
+      font-size: 6rem;
+      font-weight: 100; }
+  .tours__btn-container {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center; }

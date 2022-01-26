@@ -1,10 +1,11 @@
 .tours {
   display: grid;
-  grid-template-columns: repeat(3, minmax(25rem, 35rem));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 35rem));
   justify-content: center;
   grid-template-rows: max-content 1fr;
   grid-column-gap: 7rem;
   padding: 0 5rem;
+  row-gap: 5rem;
 
   &__heading {
     grid-column: 1 / -1;
@@ -19,10 +20,11 @@
     grid-template-rows: 1fr;
     perspective: 150rem;
     -moz-perspective: 150rem;
+    height: 52rem;
 
     &__side {
       font-size: 2rem;
-      height: 50rem;
+      height: 52rem;
       transition: all 0.8s ease;
       width: 100%;
       backface-visibility: hidden;
@@ -153,5 +155,52 @@
         );
       }
     }
+
+    &__details {
+      padding: 3rem;
+    }
+
+    &__list {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-of-type) {
+          border-bottom: 1px solid $color-grey-light-2;
+        }
+      }
+    }
+
+    // BACK SIDE STYLING
+    &__cta {
+      color: $color-white;
+    }
+
+    &__price-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 52rem;
+    }
+    &__price-only {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+    &__price-value {
+      font-size: 6rem;
+      font-weight: 100;
+    }
+  }
+
+  &__btn-container {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
   }
 }
