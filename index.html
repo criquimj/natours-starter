@@ -16,6 +16,34 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+
+      <label for="navi-toggle" class="navigation__button">MENU</label>
+
+      <div class="navigation__background">&nbsp;</div>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">About Natours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Your benefits</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Popular tours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">About Natours</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <header class="header">
       <div class="header__logo-box">
         <img
@@ -296,7 +324,110 @@
           </div>
         </div>
       </section>
+
+      <section class="section-book">
+        <div class="booking">
+          <div class="booking__form-box">
+            <form action="#" class="form">
+              <div class="form__heading-box">
+                <h2 class="heading-secondary form__heading">
+                  Start booking now
+                </h2>
+              </div>
+              <div class="form__group form__group--1">
+                <input
+                  id="name"
+                  type="text"
+                  class="form__input"
+                  placeholder="Full name"
+                  required
+                />
+                <label class="form__label" for="name">Full name</label>
+              </div>
+              <div class="form__group form__group--2">
+                <input
+                  id="email"
+                  type="email"
+                  class="form__input"
+                  placeholder="Email address"
+                  required
+                />
+                <label class="form__label" for="email">Email address</label>
+              </div>
+              <div class="form__radio-wrapper">
+                <div class="form__group">
+                  <div class="form__radio-group">
+                    <input
+                      name="radio"
+                      type="radio"
+                      class="form__radio-input"
+                      id="small"
+                    />
+                    <label class="form__radio-label" for="small"
+                      ><span class="form__radio-button"></span>Small tour
+                      group</label
+                    >
+                  </div>
+                </div>
+                <div class="form__group">
+                  <div class="form__radio-group">
+                    <input
+                      name="radio"
+                      type="radio"
+                      class="form__radio-input"
+                      id="large"
+                    />
+                    <label class="form__radio-label" for="large"
+                      ><span class="form__radio-button"></span>Large tour
+                      group</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="form__group form__group--3">
+                <button class="form__button">Next step &rarr;</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <img
+          class="footer__logo-img"
+          src="./img//logo-green-2x.png"
+          alt="Natours logo"
+        />
+      </div>
+      <div class="footer__nav-box">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#">company</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#">contact us</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#">careers</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#">privacy policy</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#">terms</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copy-box">
+        <p class="footer__copy-text">
+          Built by JONAS SCHMEDTMANN for his online coure ADVANCED CSS AND SASS.
+          Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to use
+          this webpage for both personal and commercial uses, but not to claim
+          it as your own design. A credit to the original author, Jonas
+          Schmedtmann, is of course alwasy appreciated!
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
